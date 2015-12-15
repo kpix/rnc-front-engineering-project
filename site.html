@@ -1,0 +1,431 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        @font-face {
+            font-family: Jubilat;
+            src: url("static/Jubilat/JubilMed.otf") format("opentype");
+        }
+        @font-face {
+            font-family: Jubilat;
+            font-weight: bold;
+            src: url("static/Jubilat/Jubilat-Bold.otf") format("opentype");
+        }
+        .fonty {
+            font-family: Jubilat;
+        }
+        body {
+            background-color: #E8E8E8;
+        }
+        .navbar-default {
+            background-color: #404040;
+            color: white;
+        }
+        .navbar-default .navbar-toggle {
+            border: none;
+        }
+        .navbar-header {
+            float: none;
+        }
+        .navbar-toggle {
+            display: block;
+        }
+        .navbar-collapse {
+            border-top: 1px solid transparent;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .navbar-collapse.collapse {
+            display: none!important;
+        }
+        .navbar-nav {
+            float: none!important;
+            margin: 7.5px -15px;
+        }
+        .navbar-nav>li {
+            float: none;
+        }
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-toggle .icon-bar {
+            width: 27px; 
+            height: 4px;  
+        }
+        .main {
+            margin-top:40px;
+            padding: 10px;
+            background-color:white;
+        }
+        .share-link {
+            border-radius: 0px;
+            min-height: 36px;
+        }
+        .share-link > small {
+            margin: 4px 0 0 10px;
+        }
+        .btn-one {
+            border-top: 7px solid #DB7093;
+            width: 180px;
+            padding:20px;
+            border-radius: 0px;
+            margin-right: 10px;
+        }
+        .btn-two {
+            border-left: 20px solid #DB7093;
+            width: 100%;
+            height: 50px;
+            text-align: left;
+            border-radius: 0px;
+            margin-bottom: 12px;
+        }
+        .disabled-element {
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+        }
+        .highlight-grey, .thumbnail:hover {
+            background-color: grey;
+        }
+        .highlight-blue, .btn-one:hover, .btn-one:focus, .btn-two:hover, .btn-two:focus {
+            background-color: #336699;
+            color: white;
+            border-top: 0px;
+            border-left: 0px;
+        }
+        .thumbnail {
+            padding: 0;
+            border-radius: 0px;
+        }
+        .navbar-btn {
+            margin-top:14px;
+            border-radius: 0px;
+        }
+        .answer-info {
+            font-size: 10px;
+        }
+        .answer .col-xs-6, .answer .panel-body {
+            padding: 0;
+        }
+        .answer-details {
+            padding: 15px;
+        }
+        .answer-header {
+            font-weight: bold;
+        }
+        .login {
+            color: white;
+            font-size: 9px;
+            margin: 20px 20px 0 0;
+        }
+        .login:hover {
+            color:white;
+        }
+        .gop {
+            position:absolute;
+            top: 0;
+            left:0;
+            right:0;
+            margin-left:auto;
+            margin-right:auto;
+            width:180px;
+            height:80px;
+            background-color:red;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 80px;
+            font-size:45pt;
+            font-weight: bold;
+            color:white;
+        }
+    </style>
+    <body>
+        <header class="nav-header">
+          <nav class="navbar navbar-default navbar-custom">
+            <div class="container-fluid header-stuff">
+              <div class="col-xs-10 col-xs-offset-1">
+                <div class="navbar-header">
+                  <a class="btn btn-danger navbar-btn">CONTRIBUTE</a>
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <small class="text-center" style="font-size:9px">MENU</small>          
+                  </button>
+                  <a href="" class="pull-right navbar-btn login">SEARCH | LOG IN</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="gop">
+          <span>GOP</span>
+        </div>
+        <br/>        
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="text-center">
+                <h2 class="fonty">Which Republican President Are You?</h2>
+                <span>Take the Quiz and Share Your Results</span>
+              </div>
+            </div>     
+          </div>
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="main">
+                <br/>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <a class="btn btn-primary share-link col-xs-2" href="https://facebook.com">
+                        <img src="static/facebook.png" class="pull-left">
+                        <small class="pull-left">(100)</small>
+                      </a>
+                      <a class="btn btn-info share-link col-xs-2" href="https://twitter.com">
+                        <img src="static/twitter.png" class="pull-left">
+                        <small class="pull-left">(100)</small>
+                      </a>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h4>1.  Choose a snack.</h4>
+                      <div class="question_one qa">
+                          <div class="row">
+                            <div class="col-xs-3">
+                              <div class="thumbnail">
+                                <img src="static/snack/1.jpg">
+                                <div class="caption">
+                                  <input type="checkbox" value="1"> <small>Black Cherries</small>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="thumbnail">
+                                <img src="static/snack/2.jpg">
+                                <div class="caption">
+                                  <input type="checkbox" value="2"> <small>Jelly Beans</small>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="thumbnail">
+                                <img src="static/snack/3.jpg">
+                                <div class="caption">
+                                  <input type="checkbox" value="3"> <small>Popcorn</small>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-3">
+                              <div class="thumbnail">
+                                <img src="static/snack/4.jpg">
+                                <div class="caption">
+                                  <input type="checkbox" value="4"> <small>Pigs in a Blanket</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h4>2.  Choose a vacation.</h4>
+                      <div class="question_two qa">
+                        <button type="button" class="btn btn-default btn-lg btn-one " value="1">Colorado</button>
+                        <button type="button" class="btn btn-default btn-lg btn-one " value="2">California</button>
+                        <button type="button" class="btn btn-default btn-lg btn-one " value="3">Camp David</button>
+                        <button type="button" class="btn btn-default btn-lg btn-one " value="4">Mississippi</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h4>3.  Choose an animal.</h4>
+                      <div class="question_three qa">
+                            <button type="button" class="btn btn-default btn-lg btn-two text-left" value="1">BEAR</button>
+                            <button type="button" class="btn btn-default btn-lg btn-two text-left" value="2">BOBCAT</button>
+                            <button type="button" class="btn btn-default btn-lg btn-two text-left" value="3">HORSE</button>
+                            <button type="button" class="btn btn-default btn-lg btn-two text-left" value="4">DOG</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h4>4.  Choose two articles of clothing.</h4>
+                      <div class="question_four qa">
+                          <div class="row">
+                            <div class="col-xs-3">
+                              <div class="thumbnail">
+                                <img src="static/clothing/1.jpg">
+                                <div class="caption">
+                                  <input type="checkbox" value="1"> <small>Cowboy boots</small>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-3">
+                            <div class="thumbnail">
+                              <img src="static/clothing/2.jpg">
+                              <div class="caption">
+                                <input type="checkbox" value="2"> <small>Top Hat</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-3">
+                            <div class="thumbnail">
+                              <img src="static/clothing/3.jpg">
+                              <div class="caption">
+                                <input type="checkbox" value="3"> <small>Socks</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-3">
+                            <div class="thumbnail">
+                              <img src="static/clothing/4.jpg">
+                              <div class="caption">
+                                <input type="checkbox" value="4"> <small>Bowtie</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <br/>
+                <div class="answer hide"> 
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="answer-details">
+                              <small>Which Republican President Are You?</small>
+                              <h4 class="answer-header fonty"></h4>
+                              <br/>
+                              <small class="answer-info"></small>
+                            </div>
+                          </div>
+                          <div class="col-xs-6">
+                              <img src="" class="img-responsive pull-right answer-img">
+                          </div>
+                        </div>
+                      </div>     
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <b><h4>SHARE YOUR RESULTS</h4></b>
+                      <a class="btn btn-primary share-link col-xs-2" href="https://facebook.com">
+                        <img src="static/facebook.png" class="pull-left">
+                        <small class="pull-left">(100)</small>
+                      </a>
+                      <a class="btn btn-info share-link col-xs-2" href="https://twitter.com">
+                        <img src="static/twitter.png" class="pull-left">
+                        <small class="pull-left">(100)</small>
+                      </a>
+                    </div>
+                  </div>
+                  <br/><br/> 
+                </div>
+              </div>
+            </div>
+            <br/><br/><br/>
+          </div>
+        </div>        
+        <script>
+          $(document).ready(function() {
+              var text = {"coolidge": "Coolidge", "ford": "Ford", "hw-bush": "H.W. Bush", "ike": "Ike", "lincoln": "Lincoln", "reagan": "Reagan", "Teddy": "Teddy", "w-bush": "W. Bush"};
+              var points = 0;
+              var modifier = 0;
+                
+              function isFinished() {
+                if (points == 5) {
+                  $(".answer").removeClass("hide"); 
+                  window.scrollTo(0, document.body.scrollHeight); 
+                  var tally = (points + modifier) % 8;
+                  var president = Object.keys(text)[tally];
+                  $(".answer-header").text("YOU GOT: " + text[president].toUpperCase());
+                  $(".answer-info").text("President " + text[president] + " served the American People. lorem ipsum lorem ipsum lorem ipsum lorem ipsum");
+                  $(".answer-img").prop("src", "static/presidents/"+president+".jpg");
+                }
+              }
+              function disableInputs(element) {
+                element.addClass("disabled-element");
+              }
+              function highlightInput(element, classname) {
+                element.removeClass("disabled-element");
+                element.addClass(classname);
+              }
+              function doQuestionOne(element,e) {
+                e.preventDefault();
+                if($(".question_one input:checked").length == 0) {
+                  element.closest(".thumbnail").find("input").prop("checked", true);
+                  $.each($(".question_one input:checkbox:not(:checked)"), function() {
+                      disableInputs($(this).closest(".thumbnail"));
+                  });
+                  highlightInput(element, "highlight-grey");
+                  modifier += parseInt(element.closest(".thumbnail").find("input").val());
+                  points += 1;
+                  isFinished();
+                }
+              }
+              function doQuestionTwo(element, e) {
+                e.preventDefault();
+                if($(".question_two .highlight-blue").length == 0) {
+                    disableInputs($(".question_two button"));
+                    highlightInput(element, "highlight-blue");
+                    modifier += parseInt(element.val());
+                    points += 1;
+                    isFinished();
+                }
+              }
+              function doQuestionThree(element, e) {
+                e.preventDefault();
+                if($(".question_three .highlight-blue").length == 0) {
+                    disableInputs($(".question_three button"));
+                    highlightInput(element, "highlight-blue");
+                    modifier += parseInt(element.val());
+                    points += 1;
+                    isFinished();
+                }
+              }
+              function doQuestionFour(element, e) {
+                e.preventDefault();
+                if($(".question_four input:checked").length < 2 && !element.closest(".thumbnail").find("input").is(":checked")) {
+                  element.closest(".thumbnail").find("input").prop("checked", true);
+                  highlightInput(element, "highlight-grey");
+                  modifier += parseInt(element.closest(".thumbnail").find("input").val());
+                  points += 1;
+                  isFinished();
+                }
+                if($(".question_four input:checked").length >= 2) {
+                  $.each($(".question_four input:checkbox:not(:checked)"), function() {
+                      disableInputs($(this).closest(".thumbnail"));
+                  });
+                }
+              }
+              $(".question_one").on("click", ".thumbnail", function(e) {
+                doQuestionOne($(this),e);
+              });
+              $(".question_two").on("click", "button", function(e) {
+                doQuestionTwo($(this),e);
+              });
+              $(".question_three").on("click", "button", function(e) {
+                doQuestionThree($(this), e);
+              });
+              $(".question_four").on("click", ".thumbnail", function(e) {
+                doQuestionFour($(this), e); 
+              });
+        }); 
+        </script>
+    </body>
+</html>
